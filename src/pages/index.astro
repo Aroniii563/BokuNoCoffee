@@ -43,8 +43,9 @@ import Ramen from '../img/ramen.png';
 	@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 	main{
-		min-height: 100vh;
-		max-width: 100%;
+		height: 100vh;
+		max-height: 100%;
+		width: 100%;
 		position: relative;
 	}
 
@@ -52,7 +53,7 @@ import Ramen from '../img/ramen.png';
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		position: absolute;
+		position: fixed;
 		left: 35%;
 	}
 
@@ -149,11 +150,86 @@ import Ramen from '../img/ramen.png';
 	}
 
 	.login a button:hover{
+		cursor: pointer;
+		transition: all 0.5s ease-out;
+	}
 
+	.login a button:hover:first-child{
+		scale: 1.2;
+		margin-right: 20px;
+	}
+
+	.login a button:hover:last-child{
+		scale: 1.2;
+		margin-left: 20px;
+	}
+
+	#izquierda{
+		position: fixed;
+		top: 100%;
+		filter: hue-rotate(30deg);
+	}
+
+	#izquierda img:first-child{
+		position: absolute;
+		bottom: 200px;
+		left: -100px;
+		rotate: 10deg;
+		scale: 1.2;
+		z-index: 8;
+	}
+
+	#izquierda img:nth-child(2){
+		position: absolute;
+		bottom: 100px;
+		left: -100px;
+		rotate: 10deg;
+		scale: 1.35;
+		z-index: 10;
+	}
+
+	#izquierda img:nth-child(3){
+		position: absolute;
+		bottom: 300px;
+		left: -270px;
+		rotate: 15deg;
+		scale: 1.5;
+		z-index: 6;
 	}
 
 	#derecha{
-		transform: scaleX(-1); /* Para generar el efecto espejo */
-		position: absolute;
+		position: fixed;
+		top: 100%;
+		filter: hue-rotate(30deg);
+		transform: scaleX(-1);
+		margin-left: 1850px;
 	}
+
+	#derecha img:first-child{
+		position: absolute;
+		bottom: 200px;
+		left: -100px;
+		rotate: 10deg;
+		scale: 1.2;
+		z-index: 8;
+	}
+
+	#derecha img:nth-child(2){
+		position: absolute;
+		bottom: 100px;
+		left: -100px;
+		rotate: 10deg;
+		scale: 1.35;
+		z-index: 10;
+	}
+
+	#derecha img:nth-child(3){
+		position: absolute;
+		bottom: 300px;
+		left: -270px;
+		rotate: 15deg;
+		scale: 1.5;
+		z-index: 6;
+	}
+
 </style>
