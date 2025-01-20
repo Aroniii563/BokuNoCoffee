@@ -25,16 +25,6 @@ import Ramen from '../img/ramen.png';
 				</div>
 			</div>
 		</section>
-		<section id="izquierda">
-			<img src={Maquina.src} alt="maquina">
-			<img src={Ramen.src} alt="ramen">
-			<img src={Maquina2.src} alt="maquina2">
-		</section>
-		<section id="derecha">
-			<img src={Maquina.src} alt="maquina">
-			<img src={Ramen.src} alt="ramen">
-			<img src={Maquina2.src} alt="maquina2">
-		</section>
 	</main>
 </Layout>
 
@@ -164,73 +154,4 @@ import Ramen from '../img/ramen.png';
 		scale: 1.2;
 		margin-left: 20px;
 	}
-
-	#izquierda{
-		position: fixed;
-		top: 100%;
-		filter: hue-rotate(30deg);
-	}
-
-	#izquierda img:first-child{
-		position: absolute;
-		bottom: 200px;
-		left: -100px;
-		rotate: 10deg;
-		scale: 1.2;
-		z-index: 8;
-	}
-
-	#izquierda img:nth-child(2){
-		position: absolute;
-		bottom: 100px;
-		left: -100px;
-		rotate: 10deg;
-		scale: 1.35;
-		z-index: 10;
-	}
-
-	#izquierda img:nth-child(3){
-		position: absolute;
-		bottom: 300px;
-		left: -270px;
-		rotate: 15deg;
-		scale: 1.5;
-		z-index: 6;
-	}
-
-	#derecha{
-		position: fixed;
-		top: 100%;
-		filter: hue-rotate(30deg);
-		transform: scaleX(-1);
-		margin-left: 1850px;
-	}
-
-	#derecha img:first-child{
-		position: absolute;
-		bottom: 200px;
-		left: -100px;
-		rotate: 10deg;
-		scale: 1.2;
-		z-index: 8;
-	}
-
-	#derecha img:nth-child(2){
-		position: absolute;
-		bottom: 100px;
-		left: -100px;
-		rotate: 10deg;
-		scale: 1.35;
-		z-index: 10;
-	}
-
-	#derecha img:nth-child(3){
-		position: absolute;
-		bottom: 300px;
-		left: -270px;
-		rotate: 15deg;
-		scale: 1.5;
-		z-index: 6;
-	}
-
 </style>
