@@ -3,20 +3,23 @@ import Layout from "../layouts/Layout.astro"
 import Logo from "../img/logotipo.png"
 ---
 
-<Layout title="iniciar sesión">
+<Layout title="Registrarse">
     <main>
         <form action="" method="post">
             <fieldset>
                 <a href="/"><img src={Logo.src} alt="logotipo"></a>
-                <h1>Iniciar sesión</h1>
+                <h1>Registrarse</h1>
+                <label for="name">Nombre</label>
+                <input type="text" name="name">
+                <label for="ape">Apellidos</label>
+                <input type="text" name="ape">
                 <label for="mail">Correo electrónico</label>
                 <input type="email" id="mail" required>  
                 <label for="contraseña">Contraseña</label>
                 <input type="password" id="contraseña" required>
-                <button type="submit">Comenzar</button>
+                <button type="submit">Registrarse</button>
                 <div id="enlaces">
                     <a href="/reset"><p>He olvidado mi contraseña</p></a>
-                    <a href="register"><p>Aún no tengo cuenta</p></a>
                 </div>
             </fieldset>
         </form>
@@ -37,7 +40,7 @@ import Logo from "../img/logotipo.png"
         position: relative;
         width: 45%;
         height: 25%;
-        top: 25%;
+        top: 15%;
     }
 
     fieldset{
@@ -56,7 +59,7 @@ import Logo from "../img/logotipo.png"
         color: #fff;
         font-family: "Rajdhani", sans-serif;
         font-size: 1.5em;
-        padding: 12px 10px 12px 48px;
+        padding: 50px 10px 25% 48px;
         animation: parpadeo 3s ease infinite;
     }
 
@@ -72,10 +75,14 @@ import Logo from "../img/logotipo.png"
         }
     }
 
+    fieldset h1{
+        margin-top: 25%;
+    }
+
     fieldset img{
         width: 25%;
         position: absolute;
-        top: -16.5vh;
+        top: -14vh;
         left: 37vh;
         transition: all 0.5s ease-in;
     }
@@ -139,6 +146,11 @@ import Logo from "../img/logotipo.png"
     }
 
     @media (width < 1500px){
+        fieldset{
+            padding: 50px 10px 25% 48px;
+            font-size: 1.2em;
+        }
+
         fieldset img{
             top: -13vh;
             left: 34vh;
@@ -155,11 +167,12 @@ import Logo from "../img/logotipo.png"
 
     @media (width < 1300px){
         fieldset{
-            padding: 20px 10px 20px 48px;
+            padding: 50px 10px 25% 48px;
+            font-size: 1em;
         }
 
         fieldset img{
-            top: -14vh;
+            top: -13vh;
         }
 
         fieldset button{
@@ -173,7 +186,7 @@ import Logo from "../img/logotipo.png"
             height: 40vh;
             font-weight: 100;
             font-size: 1em;
-            padding: 35px 15px 30px 50px;           
+            padding: 25% 10px 25% 50px;         
         }
         
         fieldset h1{
@@ -192,6 +205,7 @@ import Logo from "../img/logotipo.png"
         }
 
         #enlaces{
+            margin-right: 28px;
             margin-bottom: 60vh;
             margin-top: -20px;
         }
