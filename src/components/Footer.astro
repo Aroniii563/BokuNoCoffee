@@ -56,4 +56,70 @@ import Git from '../img/github.png';
         scale: 1.2;
     }
 
+    @media (width < 1200px){
+        #text{
+            font-size: 75%;
+        }
+
+        footer{
+            bottom: 50px;
+        }
+    }
+
+    @media (width < 1000px){
+        footer{
+            flex-direction: column;
+            backdrop-filter: blur(5px);
+        }
+
+        #text{
+            font-size: 150%;
+            text-align: center;
+        }
+
+        #social-media{
+            border-top: 2px solid black;
+            margin-top: 20px;
+        }
+
+        #social-media a{
+            margin-top: 10px;
+            width: 20%;
+        }
+
+
+        #social-media a img{
+            width: 8vh;
+        }
+    }
+
+    @media (width < 800px){
+        footer{
+            bottom: 190px;
+        }
+
+        #text{
+            font-size: 125%;
+        }
+    }
+
+    @media (width < 500px){
+        footer{
+            bottom: 35px;
+        }
+
+        #text{
+            font-size: 100%;
+        }
+
+        #social-media a img{
+            width: 5vh;
+        }
+    }
+    @media (width < 380px) and (height < 670px){
+        #text{
+            font-size: 80%;
+        }
+    }
+
 </style> 

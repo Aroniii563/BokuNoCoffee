@@ -1,9 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import Logo from '../img/logotipo.png';
-import Maquina from '../img/maquina.png';
-import Maquina2 from '../img/maquina2.png';
-import Ramen from '../img/ramen.png';
 import LayoutFooter from '../layouts/Layout-footer.astro';
 ---
 
@@ -22,7 +18,7 @@ import LayoutFooter from '../layouts/Layout-footer.astro';
 				</div>
 				<div class="login">
 					<a href="/login"><button>Iniciar sesión</button></a>
-					<a href="/register"><button>Registro</button></a>
+					<a href="/register"><button id="register">Registro</button></a>
 				</div>
 			</div>
 		</section>
@@ -46,10 +42,11 @@ import LayoutFooter from '../layouts/Layout-footer.astro';
 		flex-direction: column;
 		position: fixed;
 		left: 35%;
+		top: -7%;
 	}
 
 	.logo img{
-		width: 60%;
+		width: 65%;
 		animation: bote 2.5s infinite ease-out;
 	}
 
@@ -76,13 +73,11 @@ import LayoutFooter from '../layouts/Layout-footer.astro';
 		justify-content: center;
 		flex-direction: row;
 		text-align: center;
-		width: 75%;
-		margin-left: 10%;
+		margin-right: 35%;
 	}
 
 	.paginas a{
-		margin-top: 15px;
-		width: 75%;
+		margin: 0 5% 2.5% 5%;
 	}
 
 	.paginas a button{
@@ -122,7 +117,7 @@ import LayoutFooter from '../layouts/Layout-footer.astro';
 
 	.login{
 		text-align: center;
-		margin-left: 3.5%;
+		margin-left: 7%;
 		margin-top: 25px;
 		width: 50%;
 	}
@@ -154,5 +149,159 @@ import LayoutFooter from '../layouts/Layout-footer.astro';
 	.login a button:hover:last-child{
 		scale: 1.2;
 		margin-left: 20px;
+	}
+
+	@media (width < 1400px){
+		.login a button{
+			font-size: 15px;
+		}
+	}
+
+	@media (width < 1200px){
+		.login a button{
+			font-size: 10px;
+		}
+
+		.paginas a button{
+			font-size: 35px;
+		}
+	}
+
+	@media (width < 1000px){
+		#centro{
+			top: 0;
+			left: 10%;
+		}
+
+		.paginas{
+			flex-direction: column;
+		}
+
+		.logo img{
+			width: 150%;
+			right: 30%;
+		}
+
+		.paginas a button{
+			font-size: 75px;
+			margin-left: 65%;
+		}
+
+		.login{
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			width: 80%;
+			left: 50%;
+		}
+
+		.login a{
+			width: 50%;
+		}
+
+		.login a button{
+			font-size: 22px;
+			width: 100%;
+			padding: 7%;
+		}
+
+		.login a #register{
+			position: relative;
+			top: 15px;
+		}
+	}
+
+	@media (width < 900px){
+		#centro{
+			left: 20%;
+		}
+
+		.logo img{
+			width: 120%;
+		}
+
+		.paginas a button{
+			margin-left: 30%;
+		}
+
+		.login{
+			left: 35%;
+		}
+	}
+
+	@media (width < 800px){
+		#centro{
+			left: 25%;
+		}
+
+		.logo img{
+			width: 100%;
+		}
+
+		.paginas a button{
+			font-size: 50px;
+			margin-left: 35%;
+		}
+
+		.login{
+			width: 50%;
+			left: 30%;
+		}
+
+		.login a button{
+			font-size: 15px;
+			width: 120%;
+			padding: 10%;
+		}
+	}
+
+	@media (width < 500px){
+		#centro{
+			left: -5%;
+		}
+
+		.logo img{
+			width: 200%;
+		}
+
+		.paginas a button{
+			font-size: 40px;
+			margin-left: 110%;
+		}
+
+		.login{
+			width: 50%;
+			left: 80%;
+		}
+
+		.login a button{
+			font-size: 12.5px;
+			width: 190%;
+			padding: 15%;
+		}
+	}
+
+	@media (width < 380px) and (height < 670px){
+		#centro{
+			left: 5%;
+		}
+
+		.logo img{
+			width: 175%;
+		}
+
+		.paginas a button{
+			font-size: 30px;
+			margin-left: 90%;
+		}
+
+		.login{
+			left: 65%;
+		}
+
+		.login a button{
+			font-size: 12px;
+		}
 	}
 </style>
