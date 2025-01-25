@@ -1,0 +1,59 @@
+---
+import Insta from '../img/instagram.png';
+import Git from '../img/github.png';
+---
+
+<footer>
+    <div id="text">
+        <p>&copy; 2025 Boku no Coffee S.L. | Casi todos los derechos reservados.</p>
+    </div>
+    <div id="social-media">
+        <a href="https://www.instagram.com/bokunocoffee.tnf/" target="_blank"><img src={Insta.src} alt="instagram"></a>
+        <a href="https://github.com/Aroniii563/BokuNoCoffee" target="_blank"><img src={Git.src} alt="github"></a>
+    </div>
+</footer>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+
+    footer{
+        border-top: 2px solid black;
+        display: flex;
+        justify-content: center;
+        width: 55%;
+        font-family: "Rajdhani", sans-serif;
+        position: relative;
+        left: 25%;
+        bottom: 70px;
+    }
+
+    #text{
+        font-weight: bolder;
+        width: 100%;
+        font-size: 120%;
+        margin-top: 5px;
+    }
+
+    #social-media{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    #social-media a{
+        width: 50%;
+        margin-right: 10px;
+    }
+
+    #social-media a img{
+        width: 5vh;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #social-media a img:hover{
+        rotate: 360deg;
+        scale: 1.2;
+    }
+
+</style> 

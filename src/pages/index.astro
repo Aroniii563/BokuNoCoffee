@@ -4,10 +4,11 @@ import Logo from '../img/logotipo.png';
 import Maquina from '../img/maquina.png';
 import Maquina2 from '../img/maquina2.png';
 import Ramen from '../img/ramen.png';
+import LayoutFooter from '../layouts/Layout-footer.astro';
 ---
 
 
-<Layout title="Boku no Coffee">
+<LayoutFooter title="Boku no Coffee">
 	<main>
 		<section id="centro">
 			<div class="logo">
@@ -26,20 +27,20 @@ import Ramen from '../img/ramen.png';
 			</div>
 		</section>
 	</main>
-</Layout>
+</LayoutFooter>
 
 <style>
 
 	@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 	main{
-		height: 100vh;
-		max-height: 100%;
 		width: 100%;
+		height: 92.5vh;
 		position: relative;
 	}
 
 	#centro{
+		width: 50%;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
@@ -48,7 +49,7 @@ import Ramen from '../img/ramen.png';
 	}
 
 	.logo img{
-		width: 50%;
+		width: 60%;
 		animation: bote 2.5s infinite ease-out;
 	}
 
@@ -73,9 +74,9 @@ import Ramen from '../img/ramen.png';
 	.paginas{
 		display: flex;
 		justify-content: center;
-		flex-direction: column;
+		flex-direction: row;
 		text-align: center;
-		width: 50%;
+		width: 75%;
 		margin-left: 10%;
 	}
 
