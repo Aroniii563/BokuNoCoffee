@@ -1,0 +1,72 @@
+---
+import LayoutPag from "../layouts/Layout-pag.astro";
+
+// Coordenadas del lugar exacto
+const coord = { lat: 28.4852638, lng: 16.3160487 };
+---
+
+<LayoutPag title="Ubicación de Boku no Coffee">
+  <main>
+    <div id="map"></div>
+
+    <script>
+      // Cargar Google Maps dinámicamente
+      function loadGoogleMaps() {
+        return new Promise((resolve, reject) => {
+          if (window.google) {
+            resolve(window.google);
+          } else {
+            const script = document.createElement("script");
+            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAA-ry1twlg-a_iP0FyVP_SsSNaC4z5chs&callback=initMap";
+            script.async = true;
+            script.defer = true;
+            script.onerror = () => reject(new Error("Error al cargar Google Maps"));
+            document.head.appendChild(script);
+          }
+        });
+      }
+
+      // Inicializar el mapa
+      async function initMap() {
+        try {
+          const google = await loadGoogleMaps();
+          const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 28.4852638, lng: 16.3160487 }, // Coordenadas
+            zoom: 15, // Nivel de zoom
+          });
+
+          // Agregar un marcador
+          new google.maps.Marker({
+            position: { lat: 28.4852638, lng: 16.3160487 },
+            map: map,
+            title: "Boku no Coffee",
+          });
+        } catch (error) {
+          console.error("Error inicializando Google Maps:", error);
+        }
+      }
+
+      // Ejecutar al cargar la página
+      document.addEventListener("DOMContentLoaded", initMap);
+    </script>
+  </main>
+
+  <style>
+    main {
+      width: 100%;
+      height: 100vh; /* Ocupa todo el alto de la pantalla */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #map {
+      width: 100%; /* Ajusta el ancho del mapa */
+      height: 500px; /* Ajusta la altura del mapa */
+      max-width: 1200px; /* Máximo ancho del contenedor */
+      border-radius: 12px; /* Bordes redondeados */
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+      min-height: 400px; /* Evita problemas con tamaños pequeños */
+    }
+  </style>
+</LayoutPag>
