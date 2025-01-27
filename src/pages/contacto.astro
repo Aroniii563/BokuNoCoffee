@@ -1,72 +1,243 @@
 ---
 import LayoutPag from "../layouts/Layout-pag.astro";
-
-// Coordenadas del lugar exacto
-const coord = { lat: 28.4852638, lng: 16.3160487 };
+import Ubi from '../img/ubicacion.png';
 ---
 
-<LayoutPag title="Ubicación de Boku no Coffee">
+<LayoutPag title="Boku no Coffee | Contacto">
   <main>
-    <div id="map"></div>
-
-    <script>
-      // Cargar Google Maps dinámicamente
-      function loadGoogleMaps() {
-        return new Promise((resolve, reject) => {
-          if (window.google) {
-            resolve(window.google);
-          } else {
-            const script = document.createElement("script");
-            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAA-ry1twlg-a_iP0FyVP_SsSNaC4z5chs&callback=initMap";
-            script.async = true;
-            script.defer = true;
-            script.onerror = () => reject(new Error("Error al cargar Google Maps"));
-            document.head.appendChild(script);
-          }
-        });
-      }
-
-      // Inicializar el mapa
-      async function initMap() {
-        try {
-          const google = await loadGoogleMaps();
-          const map = new google.maps.Map(document.getElementById("map"), {
-            center: { lat: 28.4852638, lng: 16.3160487 }, // Coordenadas
-            zoom: 15, // Nivel de zoom
-          });
-
-          // Agregar un marcador
-          new google.maps.Marker({
-            position: { lat: 28.4852638, lng: 16.3160487 },
-            map: map,
-            title: "Boku no Coffee",
-          });
-        } catch (error) {
-          console.error("Error inicializando Google Maps:", error);
-        }
-      }
-
-      // Ejecutar al cargar la página
-      document.addEventListener("DOMContentLoaded", initMap);
-    </script>
+    <div id="map">
+      <h1>Nos pueden encontrar aquí:</h1>
+      <a href="https://www.google.es/maps/place/Alquiler+de+apartamentos+en+La+Laguna/@28.483853,-16.3173685,17z/data=!4m10!1m2!2m1!1salquiler+de+locales+la+laguna!3m6!1s0xc41cdb92fffffff:0x2739fedc75a785ff!8m2!3d28.4852638!4d-16.3160487!15sCh1hbHF1aWxlciBkZSBsb2NhbGVzIGxhIGxhZ3VuYZIBEnJlYWxfZXN0YXRlX2FnZW5jeeABAA!16s%2Fg%2F1hhxbxjjd?hl=es&entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank"><img src={Ubi.src} alt="ubicacion"></a>
+    </div> 
+    <div class="contacto">
+      <h1>Enviar un mensaje:</h1>
+      <textarea name="text" id="opinion" cols="90" rows="20"></textarea>
+      <button type="submit">Enviar</button>
+      <h1>Número de contacto:</h1>
+      <p>Si tiene alguna duda o desea solucionar algún problema, sin tener que esperar a una respuesta,
+        puede contactar con el siguiente número:</p>
+      <a href="https://www.youtube.com/watch?v=WVHhayImOOY" target="_blank">922 31 56 70</a>
+    </div>
   </main>
-
-  <style>
-    main {
-      width: 100%;
-      height: 100vh; /* Ocupa todo el alto de la pantalla */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #map {
-      width: 100%; /* Ajusta el ancho del mapa */
-      height: 500px; /* Ajusta la altura del mapa */
-      max-width: 1200px; /* Máximo ancho del contenedor */
-      border-radius: 12px; /* Bordes redondeados */
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
-      min-height: 400px; /* Evita problemas con tamaños pequeños */
-    }
-  </style>
 </LayoutPag>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+
+  main {
+    width: 100%;
+    height: 95vh;
+    position: relative;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    font-family: "Rajdhani", sans-serif;
+    color: #f08ae3;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  main h1{
+    animation: roll 1s ease-in infinite;
+    font-size: 50px;
+  }
+
+  @keyframes roll{
+		0%{
+			filter: drop-shadow(1px 1px 2px aqua);
+		}
+		25%{
+			filter: drop-shadow(1px 1px 2px #725fd1);
+		}
+		50%{
+			filter: drop-shadow(1px 1px 2px violet);
+		}
+		75%{
+			filter: drop-shadow(1px 1px 2px pink);
+		}
+		100%{
+			filter: drop-shadow(1px 1px 2px #f8cc85);
+		}
+	}
+
+  #map{
+    width: 50%;
+    height: 50%;
+    border-radius: 25px;
+    margin: 30px 50px 0 50px;
+  }
+
+  #map a img{
+    width: 110%;
+    border-radius: 25px;
+    box-shadow: 5px 5px 20px #0f0f0f;
+  }
+
+  .contacto{
+    height: 60%;
+    margin: 45px 50px 0 50px;
+    font-family: "Rajdhani", sans-serif;
+    color: #f08ae3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .contacto textarea{
+    border-radius: 15px;
+    padding: 20px;
+    border: none;
+    width: 50%;
+    margin-left: 23.5%;
+  }
+
+  .contacto button{
+    background: linear-gradient(to bottom, #f08ae3, #5ac2a3 50%);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    width: 15%;
+    margin-left: 43%;
+    margin-top: 15px;
+    transition: all 0.2s ease-in;
+    font-weight: bold;
+  }
+
+  .contacto button:hover{
+    scale: 1.1;
+    cursor: pointer;
+  }
+
+  .contacto p{
+    margin: 0 20% 0 20%;
+    font-size: 20px;
+  }
+
+  .contacto a{
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    width: 25%;
+    border-radius: 10px;
+    margin-left: 38%;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .contacto a:hover{
+    scale: 1.1;
+  }
+
+  @media (width < 1400px){
+    main{
+      top: 50px;
+    }
+
+    main h1{
+      font-size: 30px;
+    }
+
+    #map a img{
+      width: 130%;
+    }
+
+    .contacto p{
+      font-size: 15px;
+    }
+
+    .contacto a{
+      font-size: 25px;
+    }
+  }
+
+  @media (width < 1100px){
+    main h1{
+      font-size: 25px;
+    }
+
+    .contacto textarea{
+      margin-left: 22%;
+    }
+
+    .contacto button{
+      font-size: 10px;
+    }
+
+    .contacto p{
+      font-size: 12px;
+    }
+
+    .contacto a{
+      font-size: 20px;
+    }
+  }
+
+  @media (width < 500px){
+    main{
+      flex-direction: column;
+      margin: 70px 0 250px 0;
+    }
+
+    main h1{
+     font-size: 35px; 
+    }
+
+
+    #map h1{
+      font-size: 1px;
+    }
+
+    #map{
+      width: 25%;
+    }
+
+    #map a img{
+      width: 300%;
+      margin: 0 60px 0 0;
+    }
+
+    .contacto textarea{
+      width: 100%;
+      margin-left: -5%;
+    }
+
+    .contacto button{
+      width: 25%;
+      font-size: 15px;
+      margin-left: 38%;
+    }
+
+    .contacto p{
+      font-size: 20px;
+      margin: 15px;
+    }
+
+    .contacto a{
+      font-size: 20px;
+      padding: 10px;
+      width: 50%;
+      margin-left: 24%;
+    }
+  }
+
+  @media (width < 380px) and (height < 670px){
+    main{
+      margin: 100px 0 300px 0;
+    }
+
+    .contacto{
+      margin-top: 30%;
+    }
+
+    .contacto textarea{
+      padding-top: 15px;
+    }
+
+    .contacto h1{
+      font-size: 30px;
+    }
+  }
+</style>
