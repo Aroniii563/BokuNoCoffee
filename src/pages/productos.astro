@@ -99,6 +99,40 @@ import Desert from '../img/postres.png';
         cursor: pointer;
     }
 
+    #food{
+        animation: lado 0.7s ease-in-out;
+    }
+
+    #desert{
+        animation: lado2 0.7s ease-in-out;
+    }
+
+    @keyframes lado{
+        0%{
+            margin-right: 50%;
+            rotate: -180deg;
+        }
+        50%{
+            margin-right: 25%;
+        }
+        100%{
+            margin-right: 0;
+        }
+    }
+
+    @keyframes lado2{
+        0%{
+            margin-left: 50%;
+            rotate: 180deg;
+        }
+        50%{
+            margin-left: 25%;
+        }
+        100%{
+            margin-left: 0;
+        }
+    }
+
     @media (width < 500px){
         main{
             margin-top: 50%;
