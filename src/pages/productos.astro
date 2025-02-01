@@ -1,19 +1,140 @@
 ---
 import LayoutPag from "../layouts/Layout-pag.astro";
+import Food from '../img/comida.webp';
+import Drink from '../img/bebida.png';
+import Desert from '../img/postres.png';
 ---
 
 <LayoutPag title="Boku no Coffee | Productos">
     <main>
         <h1>Productos</h1>
+        <div class="productos">
+            <section id="food">
+                <a href="/comida"><img src={Food.src} alt="food"></a>
+                <p>comida</p>
+            </section>
+            <section id="drink">
+                <a href="/bebida"><img src={Drink.src} alt="drink"></a>
+                <p>bebidas</p>
+            </section>
+            <section id="desert">
+                <a href="/postres"><img src={Desert.src} alt="desert"></a>
+                <p>postres</p>
+            </section>
+        </div>
     </main>
 </LayoutPag>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
     main{
         width: 100%;
         height: 120vh;
-        margin-top: 150px;
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        font-family: "Rajdhani", sans-serif;
+        text-align: center;
+    }
+
+    h1{
+        color: #f08ae3;
+        text-transform: uppercase;
+        font-size: 75px;
+        animation: roll 1s ease-in infinite;
+    }
+
+    @keyframes roll{
+		0%{
+			filter: drop-shadow(1px 2px 2px aqua);
+		}
+		25%{
+			filter: drop-shadow(1px 2px 2px #725fd1);
+		}
+		50%{
+			filter: drop-shadow(1px 2px 2px violet);
+		}
+		75%{
+			filter: drop-shadow(1px 2px 2px pink);
+		}
+		100%{
+			filter: drop-shadow(1px 2px 2px #f8cc85);
+		}
+	}
+
+    .productos{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    section a img{
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    section{
+        width: 25%;
+        height: 50%;
+        margin: 35px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    section:hover{
+        scale: 1.2.90;
+    }
+
+    section p{
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 50px;
+        position: relative;
+        bottom: 100%;
+        font-weight: bolder;
+        text-shadow: 5px 5px 10px #aaa;
+    }
+
+    section p:hover{
+        cursor: pointer;
+    }
+
+    @media (width < 500px){
+        main{
+            margin-top: 50%;
+            height: 150vh;
+        }
+
+        .productos{
+            flex-direction: column;
+            margin-top: -60%;
+        }
+
+        section{
+            width: 90%;
+            margin: 15px;
+            height: 21.5%;
+        }
+
+        section p{
+            bottom: 75%;
+        }
+
+        h1{
+            font-size: 50px;
+        }
+    }
+
+    @media (width < 400px){
+        main{
+            margin-top: 80%;
+        }
+    }
+
+    @media (width < 380px) and (height < 670px){
+        main{
+            height: 180vh;
+            margin-top: 70%;
+        }
     }
 </style>
