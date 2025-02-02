@@ -1,0 +1,283 @@
+---
+import LayoutPag from "../layouts/Layout-pag.astro";
+---
+
+<LayoutPag title="Boku no Coffee | Servicios">
+    <main>
+        <h1 class="title">Servicios</h1>
+        <div class="servicios">
+            <section id="gamer">
+                <h1>Zona gamer</h1>
+                <a href="/confirme">
+                    <p>1h / 12€</p>
+                </a>
+                <a href="/confirme">
+                    <p>2h / 20€</p>
+                    <p>3h / 27.50€</p>
+                    <p>4h / 35€</p>
+                </a>
+                <a href="/confirme">
+                    <p>5h / 50€</p>
+                </a>
+            </section>
+            <section id="cumple">
+                <h1>Cumplegamer</h1>
+                <a href="/confirme">
+                    <p>
+                        - Menú + zona gamer / 20€ por persona. <br>
+                        - Reservar con dos semanas de antelación. <br>
+                        - Si se desea algo más, se debe pagar aparte. <br>
+                    </p>
+                </a>
+            </section>
+            <section id="reserva">
+                <h1>Reservar</h1>
+                <a href="/cofirme">
+                    <p>
+                        - Se puede reservar la comida, zona gamer o los dos
+                        servicios. Mínimo dos semanas antes. <br>
+                        - No estarán todos los productos disponibles.
+                    </p>
+                </a>
+            </section>
+        </div>
+    </main>
+</LayoutPag>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+    main{
+        width: 100%;
+        height: 120vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-family: "Rajdhani", sans-serif;
+        position: relative;
+        top: -100px;
+    }
+
+    .title{
+        color: #f08ae3;
+        text-transform: uppercase;
+        font-size: 75px;
+        animation: roll 1s ease-in infinite;
+        text-align: center;
+    }
+
+    @keyframes roll{
+		0%{
+			filter: drop-shadow(1px 2px 2px aqua);
+		}
+		25%{
+			filter: drop-shadow(1px 2px 2px #725fd1);
+		}
+		50%{
+			filter: drop-shadow(1px 2px 2px violet);
+		}
+		75%{
+			filter: drop-shadow(1px 2px 2px pink);
+		}
+		100%{
+			filter: drop-shadow(1px 2px 2px #f8cc85);
+		}
+	}
+
+    .servicios{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 75%;
+        margin-left: 12%;
+    }
+
+    section{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 25px 10px 25px 10px;
+        font-size: 1.5em;
+        font-weight: 400;
+        outline: none;
+        height: 50vh;
+        border-radius: 25px;
+        border: none;
+        border: 1px solid violet;
+        animation: parpadeo 3s ease infinite;
+        margin-left: 20px;
+    }
+
+    @keyframes parpadeo{
+        0%{
+            box-shadow: none;
+        }
+        50%{
+            box-shadow: -5px -5px 15px #f08ae3, 5px 5px 15px #f08ae3;
+        }
+        100%{
+            box-shadow: none;
+        }
+    }
+
+    section h1{
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    section a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    #gamer{
+        padding: 0 10% 5% 10%;
+        background: #902576;
+        animation: abajo 0.5s ease-out;
+    }
+
+    #gamer a{
+        background: linear-gradient(to bottom, #f08ae3, #5ac2a3 50%);
+        width: 150%;
+        text-align: center;
+        border-radius: 15px;
+        font-weight: bold;
+        position: relative;
+        right: 25%;
+        margin-bottom: 10px;
+        box-shadow: 2px 2px 10px #aaa;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #gamer a:hover{
+        scale: 1.1;
+        margin: 15px 0 20px 0;
+    }
+
+    #cumple{
+        padding: 0 10% 5% 10%;
+        background: #725fd1;
+        animation: abajo 1s ease-out;
+    }
+
+    #cumple a{
+        width: 150%;
+        position: relative;
+        right: 50px;
+    }
+
+    #cumple p{
+        font-size: 25px;
+    }
+
+    #reserva{
+        padding: 0 10% 5% 10%;
+        background: #b3b31d;
+        animation: abajo 1.5s ease-out;
+    }
+
+    #reserva a{
+        width: 250%;
+        position: relative;
+        right: 110px;
+    }
+
+    #reserva p{
+        font-size: 25px;
+    }
+
+    @keyframes abajo{
+        0%{
+            margin-top: -100%;
+        }
+        25%{
+            margin-top: -75%;
+        }
+        50%{
+            margin-top: -50%;
+        }
+        75%{
+            margin-top: -25%;
+        }
+        100%{
+            margin-top: 0;
+        }
+    }
+
+    @keyframes abajo2{
+        0%{
+            margin-top: -100%;
+        }
+        25%{
+            margin-top: -75%;
+        }
+        50%{
+            margin-top: -50%;
+        }
+        75%{
+            margin-top: -25%;
+        }
+        100%{
+            margin-top: 0;
+        }
+    }
+
+    @keyframes abajo3{
+        0%{
+            margin-top: -100%;
+        }
+        25%{
+            margin-top: -75%;
+        }
+        50%{
+            margin-top: -50%;
+        }
+        75%{
+            margin-top: -25%;
+        }
+        100%{
+            margin-top: 0;
+        }
+    }
+
+    @media (width < 1300px){
+        section{
+            font-size: 1em;
+        }
+
+        #reserva a{
+            right: 70px;
+        }
+    }
+
+    @media (width < 1100px){
+        main{
+            top: -60px;
+        }
+
+        section{
+            padding: 35px 20px 35px 20px;
+        }
+
+        .title{
+            font-size: 45px;
+        }
+
+        section a{
+            font-size: 15px;
+        }
+
+        #cumple h1{
+            margin-top: 75px;
+        }
+    }
+
+    @media (width < 500px){
+        .servicios{
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+</style>
