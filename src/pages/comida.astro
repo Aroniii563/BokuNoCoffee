@@ -1,5 +1,14 @@
 ---
 import LayoutPag from "../layouts/Layout-pag.astro";
+import Pollo from '../productos/comida/pollo.png';
+import Mechada from '../productos/comida/mechada.png';
+import Tortilla from '../productos/comida/tortilla.png';
+import Kiku from '../productos/comida/kiku.png';
+import Sakura from '../productos/comida/sakura.png';
+import Kimchi from '../productos/comida/kimchi.png';
+import Pato from '../productos/comida/pato.png';
+import Tonkotsu from '../productos/comida/tonkotsu.png';
+import Ebi from '../productos/comida/ebi.png';
 ---
 
 <LayoutPag title="Boku no Coffee | Comida">
@@ -8,7 +17,6 @@ import LayoutPag from "../layouts/Layout-pag.astro";
             <a href="#bocadillos"><button>Bocadillos</button></a>
             <a href="#arroz"><button>Arroz</button></a>
             <a href="#ramen"><button>Ramen</button></a>
-            <a href="#papas"><button>Papas</button></a>
         </section>
         <section id="body">
             <div class="bocadillos">
@@ -16,17 +24,17 @@ import LayoutPag from "../layouts/Layout-pag.astro";
                 <div class="container">
                     <h2>Pollo especial</h2>
                     <p>Precio: 3.50€</p>
-                    <img src="" alt="">
+                    <img src={Pollo.src} alt="pollo-especial">
                 </div>
                 <div class="container">
                     <h2>Carne mechada</h2>
                     <p>Precio: 4.50€</p>
-                    <img src="" alt="">
+                    <img src={Mechada.src} alt="mechada">
                 </div>
                 <div class="container">
                     <h2>Tortilla española</h2>
                     <p>Precio: 5.00€</p>
-                    <img src="" alt="">
+                    <img src={Tortilla.src} alt="tortilla-española">
                 </div>
             </div>
             <div class="arroz">
@@ -34,17 +42,17 @@ import LayoutPag from "../layouts/Layout-pag.astro";
                 <div class="container">
                     <h2>Arroz Kiku</h2>
                     <p>Precio: 9.00€</p>
-                    <img src="" alt="">
+                    <img src={Kiku.src} alt="kiku">
                 </div>
                 <div class="container">
                     <h2>Arroz Sakura</h2>
                     <p>Precio: 8.00€</p>
-                    <img src="" alt="">
+                    <img src={Sakura.src} alt="sakura">
                 </div>
                 <div class="container">
                     <h2>Kimchi Don</h2>
                     <p>Precio: 9.50€</p>
-                    <img src="" alt="">
+                    <img src={Kimchi.src} alt="kimchi-don">
                 </div>
             </div>
             <div class="ramen">
@@ -52,35 +60,17 @@ import LayoutPag from "../layouts/Layout-pag.astro";
                 <div class="container">
                     <h2>Ramen de pato</h2>
                     <p>Precio: 12.50€</p>
-                    <img src="" alt="">
+                    <img src={Pato.src} alt="ramen-pato">
                 </div>
                 <div class="container">
                     <h2>Ebi ramen</h2>
                     <p>Precio: 13.00€</p>
-                    <img src="" alt="">
+                    <img src={Ebi.src} alt="ebi-ramen">
                 </div>
                 <div class="container">
-                    <h2>Tonlotsu ramen</h2>
+                    <h2>Tonkotsu ramen</h2>
                     <p>Precio: 10.00€</p>
-                    <img src="" alt="">
-                </div>
-            </div>
-            <div class="papas">
-                <h1 id="papas">Papas:</h1>
-                <div class="container">
-                    <h2>Papas locas</h2>
-                    <p>Precio: 5.00€</p>
-                    <img src="" alt="">
-                </div>
-                <div class="container">
-                    <h2>Salsas y mechada</h2>
-                    <p>Precio: 6.50€</p>
-                    <img src="" alt="">
-                </div>
-                <div class="container">
-                    <h2>Salsas y mechada grande</h2>
-                    <p>Precio: 7.50€</p>
-                    <img src="" alt="">
+                    <img src={Tonkotsu.src} alt="tonkotsu-ramen">
                 </div>
             </div>
         </section>
@@ -134,6 +124,7 @@ import LayoutPag from "../layouts/Layout-pag.astro";
     #body{
         display: flex;
         justify-content: end;
+        flex-direction: row;
         width: 75%;
     }
 </style>

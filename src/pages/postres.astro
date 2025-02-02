@@ -1,0 +1,57 @@
+---
+import LayoutPag from "../layouts/Layout-pag.astro";
+import Arandanos from '../productos/postre/arandanos.png';
+import Manzana from '../productos/postre/manzana.png';
+import Chocolate from '../productos/postre/chocolate.png';
+import Mochis from '../productos/postre/mochis.png';
+import Dorayaki from '../productos/postre/dorayaki.png';
+import Taiyaki from '../productos/postre/taiyaki.png';
+---
+
+<LayoutPag title="Boku no Coffee | Postres">
+    <main>
+        <section id="selector">
+            <a href="#tartas"><button>Tartas</button></a>
+            <a href="#mochis"><button>Mochis</button></a>
+            <a href="#dulces"><button>Dulces</button></a>
+        </section>
+        <section id="body">
+            <div class="tartas">
+                <h1 id="tartas">Tartas</h1>
+                <div class="container">
+                    <h2>Tarta de arandanos</h2>
+                    <p>Precio: 3.50€</p>
+                    <img src={Arandanos.src} alt="tarta-arandanos">
+                </div>
+                <div class="container">
+                    <h2>Tarta de manzana</h2>
+                    <p>Precio: 4.50€</p>
+                    <img src={Manzana.src} alt="tarta-manzana">
+                </div>
+                <div class="container">
+                    <h2>Tarta de chocolate</h2>
+                    <p>Precio: 5.00€</p>
+                    <img src={Chocolate.src} alt="tarta-chocolate">
+                </div>
+            </div>
+            <div class="dulces">
+                <h1 id="dulces">Dulces</h1>
+                <div class="container">
+                    <h2>Mochis / 4</h2>
+                    <p>Precio: 3.00€</p>
+                    <img src={Mochis.src} alt="mochis">
+                </div>
+                <div class="container">
+                    <h2>Dorayakis / 2</h2>
+                    <p>Precio: 2.50€</p>
+                    <img src={Dorayaki.src} alt="dorayaki">
+                </div>
+                <div class="container">
+                    <h2>Taiyaki</h2>
+                    <p>Precio: 4.00€</p>
+                    <img src={Taiyaki.src} alt="taiyaki">
+                </div>
+            </div>
+        </section>
+    </main>
+</LayoutPag>

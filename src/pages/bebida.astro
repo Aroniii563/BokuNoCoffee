@@ -1,0 +1,72 @@
+---
+import LayoutPag from "../layouts/Layout-pag.astro";
+import Coca from '../productos/bebida/coca-zero.png';
+import Fanta from '../productos/bebida/fanta-naranja.png';
+import Lipton from '../productos/bebida/lipton.png';
+import Fresa from '../productos/bebida/fresa.png';
+import Mango from '../productos/bebida/mango.png';
+import Bosque from '../productos/bebida/bosque.png';
+import Limon from '../productos/bebida/limon.png';
+import Sake from '../productos/bebida/sake.png';
+---
+
+<LayoutPag title="Boku no Coffee | Bebidas">
+    <main>
+        <section id="selector">
+            <a href="#refrescos"><button>Bocadillos</button></a>
+            <a href="#batidos"><button>Batidos</button></a>
+            <a href="#alcohol"><button>Alcohol</button></a>
+        </section>
+        <section id="body">
+            <div class="refrescos">
+                <h1 id="refrescos">Refrescos</h1>
+                <div class="container">
+                    <h2>Coca-cola Zero</h2>
+                    <p>Precio: 2.50€</p>
+                    <img src={Coca.src} alt="coca-zero">
+                </div>
+                <div class="container">
+                    <h2>Fanta naranja</h2>
+                    <p>Precio: 2.00€</p>
+                    <img src={Fanta.src} alt="fanta-naranja">
+                </div>
+                <div class="container">
+                    <h2>Lipton</h2>
+                    <p>Precio: 2.00€</p>
+                    <img src={Lipton.src} alt="lipton">
+                </div>
+            </div>
+            <div class="batidos">
+                <h1 id="batidos">Batidos</h1>
+                <div class="container">
+                    <h2>Batido de fresa</h2>
+                    <p>Precio: 5.00€</p>
+                    <img src={Fresa.src} alt="fresa">
+                </div>
+                <div class="container">
+                    <h2>Batido de mango</h2>
+                    <p>Precio: 5.50€</p>
+                    <img src={Mango.src} alt="mango">
+                </div>
+                <div class="container">
+                    <h2>Batido de frutas del bosque</h2>
+                    <p>Precio: 6.00€</p>
+                    <img src={Bosque.src} alt="frutas-bosque">
+                </div>
+            </div>
+            <div class="alcohol">
+                <h1 id="alcohol">Alcohol</h1>
+                <div class="container">
+                    <h2>Cerveza de limón</h2>
+                    <p>Precio: 1.80€</p>
+                    <img src={Limon.src} alt="cerveza-limón">
+                </div>
+                <div class="container">
+                    <h2>Sake</h2>
+                    <p>Precio: 4.50€</p>
+                    <img src={Sake.src} alt="sake">
+                </div>
+            </div>
+        </section>
+    </main>
+</LayoutPag>
