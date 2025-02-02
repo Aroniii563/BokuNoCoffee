@@ -19,7 +19,7 @@ import Ebi from '../productos/comida/ebi.png';
             <a href="#ramen"><button>Ramen</button></a>
         </section>
         <section id="body">
-            <div class="bocadillos">
+            <article class="bocadillos">
                 <h1 id="bocadillos">Bocadillos:</h1>
                 <div class="container">
                     <h2>Pollo especial</h2>
@@ -36,8 +36,8 @@ import Ebi from '../productos/comida/ebi.png';
                     <p>Precio: 5.00€</p>
                     <img src={Tortilla.src} alt="tortilla-española">
                 </div>
-            </div>
-            <div class="arroz">
+            </article>
+            <article class="arroz">
                 <h1 id="arroz">Arroz:</h1>
                 <div class="container">
                     <h2>Arroz Kiku</h2>
@@ -54,8 +54,8 @@ import Ebi from '../productos/comida/ebi.png';
                     <p>Precio: 9.50€</p>
                     <img src={Kimchi.src} alt="kimchi-don">
                 </div>
-            </div>
-            <div class="ramen">
+            </article>
+            <article class="ramen">
                 <h1 id="ramen">Ramen:</h1>
                 <div class="container">
                     <h2>Ramen de pato</h2>
@@ -72,7 +72,7 @@ import Ebi from '../productos/comida/ebi.png';
                     <p>Precio: 10.00€</p>
                     <img src={Tonkotsu.src} alt="tonkotsu-ramen">
                 </div>
-            </div>
+            </article>
         </section>
     </main>
 </LayoutPag>
@@ -82,7 +82,7 @@ import Ebi from '../productos/comida/ebi.png';
 
     main{
         width: 100%;
-        height: 120vh;
+        height: 275vh;
         display: flex;
         flex-direction: row;
         font-family: "Rajdhani", sans-serif;
@@ -124,7 +124,57 @@ import Ebi from '../productos/comida/ebi.png';
     #body{
         display: flex;
         justify-content: end;
-        flex-direction: row;
+        flex-direction: column;
         width: 75%;
+        margin-left: 20%;
+        position: relative;
+        top: -8%;
+    }
+
+    article{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-bottom: 10%;
+    }
+
+    article h1{
+        color: #f08ae3;
+        font-size: 40px;
+        position: relative;
+        top: -10%;
+        left: 10%;
+    }
+
+    .container{
+        background: #902576;
+        color: #fff;
+        border: none;
+        border: 1px solid #f08ae3;
+        border-radius: 15px;
+        width: 50%;
+        margin: 50px;
+        padding: 10px 0 30px 0px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .container:hover{
+        scale: 1.1;
+    }
+
+    .container h2{
+        position: relative;
+        left: 20%;
+    }
+
+    .container p{
+        position: relative;
+        top: 75%;
+        padding: 10px;
+    }
+
+    .container img{
+        width: 100%;
+        padding: 20px;
     }
 </style>
