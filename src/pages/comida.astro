@@ -177,4 +177,54 @@ import Ebi from '../productos/comida/ebi.png';
         width: 100%;
         padding: 20px;
     }
+
+    @media (width < 500px){
+        main{
+            height: 815vh;
+        }
+
+        #selector{
+            flex-direction: row;
+            top: 13%;
+            left: 12.5%;
+            width: 75%;
+            z-index: 2;
+        }
+
+        #selector a button{
+            font-size: 25px;
+        }
+
+        #body{
+            width: 100%;
+            margin-left: 0;
+            top: 0;
+        }
+
+        article{
+            flex-direction: column;
+        }
+
+        article h1{
+            font-size: 75px;
+            top: 0;
+        }
+
+        .container{
+            width: 100%;
+            font-size: 25px;
+        }
+    }
+
+    @media (width < 400px){
+        main{
+            height: 945vh;
+        }
+    }
+
+    @media (width < 380px) and (height < 670px){
+        main{
+            height: 1060vh;
+        }
+    }
 </style>

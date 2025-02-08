@@ -13,12 +13,12 @@ import Sake from '../productos/bebida/sake.png';
 <LayoutPag title="Boku no Coffee | Bebidas">
     <main>
         <section id="selector">
-            <a href="#refrescos"><button>Bocadillos</button></a>
+            <a href="#refrescos"><button>Refrescos</button></a>
             <a href="#batidos"><button>Batidos</button></a>
             <a href="#alcohol"><button>Alcohol</button></a>
         </section>
         <section id="body">
-            <div class="refrescos">
+            <article class="refrescos">
                 <h1 id="refrescos">Refrescos</h1>
                 <div class="container">
                     <h2>Coca-cola Zero</h2>
@@ -35,8 +35,8 @@ import Sake from '../productos/bebida/sake.png';
                     <p>Precio: 2.00€</p>
                     <img src={Lipton.src} alt="lipton">
                 </div>
-            </div>
-            <div class="batidos">
+            </article>
+            <article class="batidos">
                 <h1 id="batidos">Batidos</h1>
                 <div class="container">
                     <h2>Batido de fresa</h2>
@@ -53,8 +53,8 @@ import Sake from '../productos/bebida/sake.png';
                     <p>Precio: 6.00€</p>
                     <img src={Bosque.src} alt="frutas-bosque">
                 </div>
-            </div>
-            <div class="alcohol">
+            </article>
+            <article class="alcohol">
                 <h1 id="alcohol">Alcohol</h1>
                 <div class="container">
                     <h2>Cerveza de limón</h2>
@@ -66,7 +66,7 @@ import Sake from '../productos/bebida/sake.png';
                     <p>Precio: 4.50€</p>
                     <img src={Sake.src} alt="sake">
                 </div>
-            </div>
+            </article>
         </section>
     </main>
 </LayoutPag>
@@ -125,14 +125,14 @@ import Sake from '../productos/bebida/sake.png';
         top: -8%;
     }
 
-    div{
+    article{
         display: flex;
         justify-content: center;
         flex-direction: row;
         margin-bottom: 10%;
     }
 
-    div h1{
+    article h1{
         color: #f08ae3;
         font-size: 40px;
         position: relative;
@@ -170,5 +170,56 @@ import Sake from '../productos/bebida/sake.png';
     .container img{
         width: 100%;
         padding: 20px;
+    }
+
+    @media (width < 500px){
+        main{
+            height: 845vh;
+        }
+
+        #selector{
+            flex-direction: row;
+            top: 13%;
+            left: 12.5%;
+            width: 75%;
+            z-index: 2;
+        }
+
+        #selector a button{
+            font-size: 25px;
+        }
+
+        #body{
+            width: 100%;
+            margin-left: 0;
+            top: 0;
+            flex-direction: column;
+        }
+
+        article{
+            flex-direction: column;
+        }
+
+        article h1{
+            font-size: 75px;
+            top: 0;
+        }
+
+        .container{
+            width: 100%;
+            font-size: 25px;
+        }
+    }
+
+    @media (width < 400px){
+        main{
+            height: 970vh;
+        }
+    }
+
+    @media (width < 380px) and (height < 670px){
+        main{
+            height: 1093vh;
+        }
     }
 </style>

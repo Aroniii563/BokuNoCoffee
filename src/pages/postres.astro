@@ -12,7 +12,6 @@ import Taiyaki from '../productos/postre/taiyaki.png';
     <main>
         <section id="selector">
             <a href="#tartas"><button>Tartas</button></a>
-            <a href="#mochis"><button>Mochis</button></a>
             <a href="#dulces"><button>Dulces</button></a>
         </section>
         <section id="body">
@@ -155,5 +154,63 @@ import Taiyaki from '../productos/postre/taiyaki.png';
     .container img{
         width: 100%;
         padding: 20px;
+    }
+
+    @media (width < 500px){
+        main{
+            height: 525vh;
+        }
+
+        #selector{
+            flex-direction: row;
+            top: 13%;
+            left: 12.5%;
+            width: 75%;
+            z-index: 2;
+        }
+
+        #selector a button{
+            font-size: 25px;
+        }
+
+        #body{
+            width: 100%;
+            margin-left: 0;
+            top: 0;
+        }
+
+        div{
+            flex-direction: column;
+        }
+
+        div h1{
+            font-size: 75px;
+            top: 0;
+        }
+
+        .container{
+            width: 100%;
+            font-size: 25px;
+        }
+
+        .container p{
+            top: 65%;
+        }
+    }
+
+    @media (width < 400px){
+        main{
+            height: 615vh;
+        }
+
+        .container h2{
+            font-size: 25px;
+        }
+    }
+
+    @media (width < 380px) and (height < 670px){
+        main{
+            height: 655vh;
+        }
     }
 </style>
