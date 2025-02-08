@@ -275,9 +275,38 @@ import LayoutPag from "../layouts/Layout-pag.astro";
     }
 
     @media (width < 500px){
+        main{
+            height: 200vh;
+        }
+
         .servicios{
+            flex-direction: column;
             margin-left: 0;
+        }
+
+        section{
+            margin-bottom: 20px;
+        }
+
+        #gamer a{
+            width: 50%;
+            left: 25%;
+        }
+
+        #cumple a{
             width: 100%;
+            right: 0;
+        }
+
+        #reserva a{
+            width: 100%;
+            right: 0;
+        }
+    }
+
+    @media (width < 400px){
+        main{
+            height: 230vh;
         }
     }
 </style>
